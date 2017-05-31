@@ -1,0 +1,13 @@
+Sublime Text 是一个非常不错的源代码及文本编辑器，但是不支持GB2312和GBK编码在很多情况下会非常麻烦。不过Sublime Package Control所提供的插件可以让Sublime Text 几乎完美地支持CJK编码的文本。
+
+安装Sublime Package Control非常简单。
+
+1、打开Preferences菜单，并选择 Browse Packages…
+
+2、系统会打开Sublime Text 的Packages文件夹，回到上一级菜单，然后打开Installed Packages文件夹
+
+3、下载并将下载的Package Control.sublime-package拷贝到Installed Packages文件夹(注意此处是Installed Packages，不是Packages文件夹)
+
+4、重启Sublime Text 
+
+然后使用Ctrl+Shift+P打开命令行模式，在里面输入Install Package即可搜索需要的Package。一般使用“ConvertToUTF8”和“GBK Encoding Support”即可正常读取和写入CJK格式的文件了。
