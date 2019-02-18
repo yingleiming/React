@@ -1,0 +1,2 @@
+使用vue-cli创建项目时会自动安装eslint代码检测工具，给前端开发带来很大不便，那么如何在项目中禁止使用eslint呢？
+其实很简单，找到项目中config文件中的index.js,修改useEslint: true为useEslint: false,即可
