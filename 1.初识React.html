@@ -10,13 +10,13 @@
 <body>
 
 <div id="example"></div>
-
+<!--必须声明type="text/babel",浏览器才能识别JSX语法-->
 <script type="text/babel">
     //1.获取页面真是的容器元素
     const exampleDom = document.getElementById("example");
-    //2.创建虚拟DOM
+    //2.jsx语法创建虚拟DOM对象
     const content = <div>hello,world</div>;
-    //3.使用RenderDom.render()将虚拟Dom添加到容器中
+    //3.将虚拟DOM渲染到页面上去
     ReactDOM.render(content,exampleDom);
 </script>
 
