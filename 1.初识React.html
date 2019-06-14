@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
 </head>
 <body>
 
-<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+<div id="example"></div>
 
+<script type="text/babel">
+    //1.获取页面真是的容器元素
+    const exampleDom = document.getElementById("example");
+    //2.创建虚拟DOM
+    const content = <div>hello,world</div>;
+    //3.使用RenderDom.render()将虚拟Dom添加到容器中
+    ReactDOM.render(content,exampleDom);
 </script>
-<script>
 
-</script>
 </body>
 </html>
