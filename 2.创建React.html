@@ -2,19 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
-    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
-    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+    <title>React 练习</title>
 </head>
 <body>
-<div id="example"></div>
+<div id="app">
+
+</div>
+
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+<script type="text/html">
+    //a.多重标签嵌套--只能由一个根节点
+    ReactDOM.render(
+        <div>
+            <h2>多重标签嵌套</h2>
+            <p>只能由一个根节点</p>
+            <b>加粗字体</b>
+            <div>
+                <ul>
+                    <li>苹果</li>
+                    <li>橘子</li>
+                    <li>花生</li>
+                </ul>
+            </div>
+        </div>,
+        document.getElementById("app")
+    );
+</script>
 <script type="text/babel">
-    // 简化的JSX语法渲染页面
-   ReactDOM.render(
-       <h1>this is my first React Code</h1>,
-       document.getElementById("example")
-   );
+    //b.js中的变量，表达式要写在{}内
+    let str = "撩课学院";
+    ReactDOM.render(
+    <div>
+        <h2>js中的变量要写在{}内</h2>
+        <span>{str}</span>
+        <hr/>
+        <h2>js中的表达式也要写在{}内</h2>
+        <span>10+10*2 = {10+10*2}</span>
+    </div>,
+    document.getElementById("app")
+    );
 </script>
 </body>
 </html>
