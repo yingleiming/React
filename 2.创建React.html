@@ -30,7 +30,7 @@
         document.getElementById("app")
     );
 </script>
-<script type="text/babel">
+<script type="text/html">
     //b.js中的变量，表达式要写在{}内
     let str = "撩课学院";
     ReactDOM.render(
@@ -42,6 +42,20 @@
         <span>10+10*2 = {10+10*2}</span>
     </div>,
     document.getElementById("app")
+    );
+</script>
+<script type="text/babel">
+    //c.内联样式通过{}方式引入
+    let myStyle = {
+        backgroundColor:"purple",
+        color:"yellow",
+        fontsize:30,//不用加px
+    };
+    ReactDOM.render(
+        <div style={myStyle}>
+            <h2>给点颜色瞧瞧</h2>
+        </div>,
+        document.getElementById("app")
     );
 </script>
 </body>
