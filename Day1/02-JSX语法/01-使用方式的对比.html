@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React!</title>
+    <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+<div id="app1"></div>
+<div id="app2"></div>
+<script>
+    // <!--往容器中插入一个span标签,class为"it-like"，内容为"撩课学院"。两种实现方式，1）普通js形式，2）JSX形式-->
+    // a).通过典型JS方式实现
+    // 1.创建变量
+    let myClass = "it-like";
+    let myContent = "撩课学院";
+
+    //2.创建DOM
+    const vDom = React.createElement("span",{className:myClass},myContent);
+
+    //3.将虚拟DOM渲染到页面上去
+    ReactDOM.render(vDom,document.getElementById("app1"));
+
+</script>
+
+</body>
+</html>
