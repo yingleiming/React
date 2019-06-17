@@ -30,11 +30,12 @@
         document.getElementById("app")
     );
 </script>
-<script type="text/html">
+<script type="text/babel">
     //b.js中的变量，表达式要写在{}内
     let str = "撩课学院";
     ReactDOM.render(
     <div>
+        {/*注释：*/}
         <h2>js中的变量要写在{}内</h2>
         <span>{str}</span>
         <hr/>
@@ -44,7 +45,7 @@
     document.getElementById("app")
     );
 </script>
-<script type="text/babel">
+<script type="text/html">
     //c.内联样式通过{}方式引入
     let myStyle = {
         backgroundColor:"purple",
@@ -55,6 +56,32 @@
         <div style={myStyle}>
             <h2>给点颜色瞧瞧</h2>
         </div>,
+        document.getElementById("app")
+    );
+</script>
+<script type="text/html">
+    //数组遍历
+    //数据
+    const  dataArr= [
+        {name:"周杰伦",age:38},
+        {name:"谢霆锋",age:42},
+        {name:"周华健",age:56},
+        {name:"王力宏",age:32},
+        {name:"刘德华",age:60},
+    ]
+    //创建虚拟DOM
+    const vDom = (
+        <div>
+            <ul>
+                {dataArr.map((data,index)=>
+                    <li key={index}>{"姓名："+data.name},{"年龄： "+data.age}</li>
+                )}
+            </ul>
+        </div>
+    );
+    //将虚拟DOM渲染到页面上去
+    ReactDOM.render(
+        vDom,
         document.getElementById("app")
     );
 </script>
