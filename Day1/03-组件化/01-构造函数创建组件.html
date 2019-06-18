@@ -12,7 +12,7 @@
 <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
 <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
 <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
-<script type="text/babel">
+<script type="text/html">
     //创建构造函数
     function Liao(){
         return(
@@ -33,6 +33,22 @@
     );
 
     //问题：无法传参
+</script>
+<script type="text/babel">
+    //获取从外部传递过来的数据
+    function Liao(props){
+        return(
+            <div>
+                <h2>我的名字叫：{props.name},我今年{props.age}岁了，我的学科有：{props.colleges}</h2>
+            </div>
+        )
+    }
+    //将组件渲染到页面上去
+    const username = "小明"
+    ReactDOM.render(
+        <Liao name={username} age="15" colleges={["java ","html ","css"]}/>,
+        document.getElementById("app")
+    );
 </script>
 </body>
 </html>
