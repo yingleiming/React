@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #app{
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="app"></div>
+<button id="btn" value="改变颜色">改变颜色</button>
+<script type="text/html">
+    //面向过程
+    let app = document.getElementById("app");
+    let btn = document.getElementById("btn");
+    btn.onclick = function () {
+        app.style.backgroundColor = "yellow";
+    }
+</script>
+<script>
+    //面向对象
+    //属性
+    function ChangeStyle(btnObj,divObj,color){
+        this.btnObj = document.getElementById(btnObj);
+        this.divObj = document.getElementById(divObj);
+        this.color = color;
+    }
+    //方法
+    ChangeStyle.prototype.init = function () {
+        var that = this;
+        this.btnObj.onclick = function () {
+            console.log(that.divObj);
+            that.divObj.style.backgroundColor = that.color;
+        }
+    }
+    //实例化
+    var cs = new ChangeStyle("btn","app","red");
+    cs.init();
+</script>
+</body>
+</html>
