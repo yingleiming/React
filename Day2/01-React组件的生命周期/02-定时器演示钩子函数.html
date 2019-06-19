@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React 练习</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+<script type="text/babel">
+    class Lift extends React.Component{
+        // （1）挂载阶段
+            constructor(props){
+                super(props);
+                this.setState= {
+                    age:1
+                }
+                console.log("constructor(props)");
+            }
+            componentWillMount(){
+                console.log("componentWillMount");
+            }
+            render(){
+                console.log("render");
+                return(
+                    <div>
+                        <h2>我是树妖！今年{this.setState.age}岁了！</h2>
+                        <button>我被砍了</button>
+                    </div>
+                );
+            }
+            componentDidMount(){
+                console.log("componentWillMount");
+
+                //开启定时器
+                this.intervalId = setInterval(()=>{
+                    console.log("定时器开始工作了");
+                },1000);
+            }
+        //  (2)更新阶段
+            componentWillUpdate(){
+                console.log("componentWillMount");
+            }
+            componentDidUpdate(){
+                console.log("componentDidUpdate");
+            }
+        //  （3）卸载阶段(销毁阶段)
+            componentWillUnmount(){
+                console.log("componentWillUnmount");
+            }
+        //  （4）错误处理
+            componentDidCatch(){
+                console.log("componentDidCatch");
+            }
+    }
+    //将组件渲染到页面上
+    ReactDOM.render(<Lift />,document.getElementById("app"));
+</script>
+</body>
+</html>
