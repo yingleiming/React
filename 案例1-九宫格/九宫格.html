@@ -163,7 +163,15 @@
 
         }
         _removeShop(){
-            alert(22222)
+            const tempArr = this.state.shopArr;
+            if (tempArr.length ===0){
+                alert("购物车空空如也~")
+                return;
+            }
+            tempArr.pop();
+            this.setState({
+                shopArr : tempArr
+            });
         }
 
     }
