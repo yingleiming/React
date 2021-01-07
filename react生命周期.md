@@ -36,7 +36,7 @@ componentDidUpdate：componentDidUpdate(preProps,preState,snapShot) ,该方法�
 
 ### 卸载阶段：
 
-componentWillUnmount：会在组件卸载及销毁之前直接调用。在此方法中执行必要的清理操作，例如，清除定时器，取消网络请求或清除在 componentDidMount() 中创建的订阅，清理无效的 DOM 元素等垃圾清理工作
+componentWillUnmount：会在组件卸载及销毁之前直接调用。在此方法中执行必要的清理操作，例如，清除定时器，取消网络请求或清除在 componentDidMount() 中创建的订阅，清理无效的 DOM 元素等垃圾清理工作。
 
 #### 异常处理：
 
